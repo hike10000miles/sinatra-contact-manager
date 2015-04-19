@@ -1,0 +1,15 @@
+<h1>Viewing Contact <%= @contact.id %></h1>
+
+First Name: <%= @contact.first_name %> 
+Last Name: <%= @contact.last_name %>
+
+<p>
+  <form action="/contacts/<%= @contact.id %>" method="post">
+    <input type="hidden" name="_method" value="delete" />
+    <input type="submit" value="Delete" />
+  </form>
+</p>
+
+<p>
+  <a href="/">Back to All Contacts</a>
+</p>

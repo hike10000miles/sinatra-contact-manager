@@ -1,0 +1,13 @@
+<h1>All Contacts</h1>
+
+<% if @contacts.count > 0 %>
+  <% @contacts.each do |contact| %>
+    <%= contact.id %> - <%= contact.first_name %> <%= contact.last_name %> 
+    <a href="/contacts/<%= contact.id %>">View</a> | <a href="/contacts/<%= contact.id %>/edit">Edit</a> 
+    <br/>
+  <% end %>
+<% else %>
+  <p>No contacts added.</p>
+<% end %>
+
+<p><a href="/new">New Contact</a></p>
